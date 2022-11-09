@@ -13,10 +13,10 @@ class Musician:
     def _popularity(self): # <----- Abstraction
         pass
 
-    def print_name_genre(self):
+    def print_name_genre(self): # <----- Encapsulation
         print(f"Name: {self.m_name()}, Genre: {self.m_genre()}")
 
-    def print_popularity(self):
+    def print_popularity(self): # <----- Encapsulation
         print(f"{self.name}'s popularity level is: {self._popularity()}")
 
 # Inherited Classes
@@ -34,7 +34,7 @@ class JazzMusician(Musician):
 
 
 class Singer(Musician):
-    instrument = 'Voice'
+    instrument = 'Voice' # <----- Class Variable
     def __init__(self, name, genre, octaves):
         super().__init__(name, genre)
         self.octaves = octaves
@@ -42,7 +42,7 @@ class Singer(Musician):
     def print_octaves(self):
         print(f"Octave Range: {self.octaves}")
 
-    @classmethod
+    @classmethod  # <----- Class Method
     def print_instrument(cls):
         print(f"Instrument: {cls.instrument}")
 
@@ -51,7 +51,6 @@ class Rapper(Musician):
         super().__init__(name, genre)
         self.monthly_streams = monthly_streams
 
-    # THIS SHOULD BE A CLASS METHOD
     def _popularity(self): # <----- Polymorphism
         if self.monthly_streams >= 50000000:
             return 'Extremely High'
@@ -67,7 +66,6 @@ class OperaSinger(Musician):
         super().__init__(name, genre)
         self.starring_roles = starring_roles
 
-    # THIS SHOULD BE A CLASS METHOD
     def _popularity(self): # <----- Polymorphism
         if self.starring_roles >= 20:
             return 'High'
