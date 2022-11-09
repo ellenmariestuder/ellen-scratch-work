@@ -42,10 +42,12 @@ ellen = AMEmployee("Ellen Studer")
 
 dan = AMEmployee("Dan Rogers")
 
-print(ellen.first_name()) # Ellen (unique to each instance)
-print(ellen.employer_name()) # A.M. Money (unique to each class)
+print(ellen.name)
 
-print(dan.first_name()) # Dan (unique to each instance)
-print(dan.employer_name()) # A.M. Money (unique to each class)
+# print(ellen.first_name()) # Ellen (unique to each instance)
+# print(ellen.employer_name()) # A.M. Money (unique to each class)
+
+# print(dan.first_name()) # Dan (unique to each instance)
+# print(dan.employer_name()) # A.M. Money (unique to each class)
 
 
