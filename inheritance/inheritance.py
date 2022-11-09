@@ -9,9 +9,12 @@ class Musician:
     
     def m_genre(self):
         return self.genre
+    
+    def _popularity(self):
+        pass
 
     def print_name_genre(self):
-        print('Name: ', self.m_name(), ', Genre: ', self.m_genre(), sep="")
+        print(f"Name: {self.m_name()}, Genre: {self.m_genre()}")
 
 
 miles_davis = Musician('Miles Davis', 'Jazz')
@@ -24,12 +27,12 @@ class JazzMusician(Musician):
         self.albums = albums
     
     def print_instrument(self):
-        print('Instrument:', self.instrument)
+        print(f"Instrument: {self.instrument}")
 
     def print_albums(self):
-        print('Albums:', self.albums)
+        print(f"Albums: {self.albums}")
 
-miles_davis = JazzMusician('Miles Davis', 'jazz', 'trumpet', ['Birth of the Cool', 'Kind of Blue', 'Tutu'])
+miles_davis = JazzMusician('Miles Davis', 'Jazz', 'Trumpet', ['Birth of the Cool', 'Kind of Blue', 'Tutu'])
 miles_davis.print_name_genre()
 miles_davis.print_instrument()
 miles_davis.print_albums()
@@ -42,11 +45,11 @@ class Singer(Musician):
         self.octaves = octaves
     
     def print_octaves(self):
-        print('Octave Range:', self.octaves)
+        print(f"Octave Range: {self.octaves}")
 
     @classmethod
     def print_instrument(cls):
-        print('Instrument:', cls.instrument)
+        print(f"Instrument: {cls.instrument}")
 
 beyonce = Singer('Beyoncé Knowles', 'Pop', 4)
 beyonce.print_name_genre()
