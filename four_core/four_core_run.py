@@ -21,3 +21,7 @@ tyga.print_popularity()
 
 janai = OperaSinger('Janai Brugger', 'Opera', 11)
 janai.print_popularity()
+
+# Encapsulation
+tyga.update_streams(5)
+tyga.print_popularity()

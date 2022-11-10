@@ -12,10 +12,12 @@ Can be accessed anywhere inside or outside the class
 ### Private-- 
 Can _only_ be accessed inside the class
 
-`__method`
-
-### Protected-- 
-Can be accessed within the class and its sub-classes
-
 `_method`
+
+
+### Property--
+hides encapsulation; gives illusion that you're accesing instance attribute
+
+`@property`
+`method`
 

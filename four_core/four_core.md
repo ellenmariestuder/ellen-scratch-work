@@ -24,6 +24,19 @@ A novice OOP programmer will most likely encounter polymorphism when a method, i
 
 The significance of polymorphism is that the object itself knows which implementation of a method to use.
 
+## Types of Polymorphism:
+
+_Method signature = arguments + name of method (i.e. nationality + self)_
+
+# overloading = same method name but different arguments
+### Overriding
+("Polymorphic overriding".) Same method signature in more than one place (same method name + argument(s)).
+
+
+### Overloading
+("Polymorphic overloading".) Same method name but different signatures. (i.e. takes new/ additional argument(s))
+
+
 
 Sources:
 

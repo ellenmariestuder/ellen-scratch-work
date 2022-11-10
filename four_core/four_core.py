@@ -22,7 +22,7 @@ class Musician:
 # Inherited Classes
 class JazzMusician(Musician):
     def __init__(self, name, genre, instrument, albums):
-        super().__init__(name, genre)
+        super().__init__(name, genre) # <- revisit; this isn't quite right
         self.instrument = instrument
         self.albums = albums
 
@@ -34,7 +34,7 @@ class JazzMusician(Musician):
 
 
 class Singer(Musician):
-    instrument = 'Voice' # <----- Class Variable
+    instrument = 'Voice' # <----- Class (Static) Variable
     def __init__(self, name, genre, octaves):
         super().__init__(name, genre)
         self.octaves = octaves
@@ -42,7 +42,7 @@ class Singer(Musician):
     def print_octaves(self):
         print(f"Octave Range: {self.octaves}")
 
-    @classmethod  # <----- Class Method
+    @classmethod  # <----- Class (Static) Method
     def print_instrument(cls):
         print(f"Instrument: {cls.instrument}")
 
@@ -51,7 +51,11 @@ class Rapper(Musician):
         super().__init__(name, genre)
         self.monthly_streams = monthly_streams
 
-    def _popularity(self): # <----- Polymorphism
+    def update_streams(self, x): # <----- Encapsulation
+        self.monthly_streams = x
+        return self.monthly_streams
+
+    def _popularity(self):       # <----- Polymorphism
         if self.monthly_streams >= 50000000:
             return 'Extremely High'
         elif self.monthly_streams >= 15000000:
@@ -66,11 +70,10 @@ class OperaSinger(Musician):
         super().__init__(name, genre)
         self.starring_roles = starring_roles
 
-    def _popularity(self): # <----- Polymorphism
+    def _popularity(self):       # <----- Polymorphism (many names; >1 method with same name)
         if self.starring_roles >= 20:
             return 'High'
         elif self.starring_roles >= 10:
             return 'Medium'
         else:
             return 'Low'
-
