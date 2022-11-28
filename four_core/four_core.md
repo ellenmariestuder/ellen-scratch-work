@@ -28,7 +28,6 @@ The significance of polymorphism is that the object itself knows which implement
 
 _Method signature = arguments + name of method (i.e. nationality + self)_
 
-# overloading = same method name but different arguments
 ### Overriding
 ("Polymorphic overriding".) Same method signature in more than one place (same method name + argument(s)).
 

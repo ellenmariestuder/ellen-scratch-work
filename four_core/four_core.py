@@ -32,6 +32,10 @@ class JazzMusician(Musician):
     def print_albums(self):
         print(f"Albums: {self.albums}")
 
+    def print_name_genre_2x(self):
+        self.print_name_genre()
+        self.print_name_genre()
+
 
 class Singer(Musician):
     instrument = 'Voice' # <----- Class (Static) Variable

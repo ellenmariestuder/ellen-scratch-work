@@ -22,7 +22,7 @@ class AbcMusician(abc.ABC):
         NotImplemented
 
 
-class Musician:
+class Musician(AbcMusician):
     def __init__(self, name):
         self._name = name
 
