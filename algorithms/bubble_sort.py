@@ -46,30 +46,51 @@ not how the code is set up.
 
 
 
-def bubble_sort(arr):
-    # outer for-loop: for each index in 0 - (length of array -1):
-    for z in range(0, len(arr)-1):
-        print(f"\nstarting loop; z = {arr[z]} (index = {z})------------------------")
-        # inner for-loop: for each index in 0 - (length of array -1 -z)
-        # (-z because we don't have to sort through already-sorted items)
-        for i in range(0, (len(arr)-1-z)):
-            # set subsequent index as j
-            j = i+1
-            print(f"\nlooping; i = {arr[i]} (index {i}); j = {arr[j]} (index {j})")
-            print(f"current arr: {arr}")
-            # compare current index and subsequent index
-            # if current index value is greater than subsequent index value
-            if arr[i] > arr[j]:
-                # swap the two values in the array
-                (arr[i], arr[j]) = (arr[j], arr[i])
-                print(f"swapped arr: {arr}")
-            else: print(f"nothing to swap")
+# def bubble_sort(arr):
+#     # outer for-loop: for each index in 0 - (length of array -1):
+#     for z in range(0, len(arr)-1):
+#         print(f"\nstarting loop; z = {arr[z]} (index = {z})------------------------")
+#         # inner for-loop: for each index in 0 - (length of array -1 -z)
+#         # (-z because we don't have to sort through already-sorted items)
+#         for i in range(0, (len(arr)-1-z)):
+#             # set subsequent index as j
+#             j = i+1
+#             print(f"\nlooping; i = {arr[i]} (index {i}); j = {arr[j]} (index {j})")
+#             print(f"current arr: {arr}")
+#             # compare current index and subsequent index
+#             # if current index value is greater than subsequent index value
+#             if arr[i] > arr[j]:
+#                 # swap the two values in the array
+#                 (arr[i], arr[j]) = (arr[j], arr[i])
+#                 print(f"swapped arr: {arr}")
+#             else: print(f"nothing to swap")
 
-    return arr
+#     return arr
+
+
+# array = [5,7,4,2,1,9]
+# print(f"input array: {array}")
+
+# sorted_array = bubble_sort(array)
+# print(f"sorted array: {sorted_array}")
+
+
+
+
+
+
+
+
 
 
 array = [5,7,4,2,1,9]
-print(f"input array: {array}")
 
-sorted_array = bubble_sort(array)
-print(f"sorted array: {sorted_array}")
+for i in range(0, len(array)):
+    print('this is i---------- ')
+    print(array[i])
+    j = i-1
+    for j in range(i, 0):
+        print('    this is j---------- ')
+        print('    ', array[j])
+        j =- 1
+
